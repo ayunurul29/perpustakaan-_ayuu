@@ -29,19 +29,27 @@
                 <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
               </div>
-              <div class="form-group">
-                <label for="id_penulis">Penulis</label>
-                <input type="text" class="form-control @error('id_penulis') is-invalid @enderror" id="id_penulis" name="id_penulis" value="{{ old('id_penulis') }}" placeholder="Enter id_penulis" >
-                @error('id_penulis')
-                <div class="invalid-feedback">{{ $message }}</div>
-                @enderror
-              </div>
+               <div class="form-group">
              <div class="form-group">
-                <label for="id_penerbit">Penerbit</label>
-                <input type="text" class="form-control @error('id_penerbit') is-invalid @enderror" id="id_penerbit" name="id_penerbit" value="{{ old('id_penerbit') }}" placeholder="Enter id_penerbit" >
-                @error('id_penerbit')
-                <div class="invalid-feedback">{{ $message }}</div>
-                @enderror
+                <label for="id_penulis">Nama Penulis</label>
+                <select class="form-control" id="id_penulis" name="id_penulis" >
+                <option selected>Pilih Penulis</option>
+                @foreach($penulis as $p)
+                <option value="{{ $p->id }}">{{ $p->nama }}</option>
+                @endforeach
+           
+            </select>
+              </div>
+               <div class="form-group">
+             <div class="form-group">
+                <label for="id_penerbit">Nama Penerbit</label>
+                <select class="form-control" id="id_penerbit" name="id_penerbit" >
+                <option selected>Pilih Kategori</option>
+                @foreach($penerbit as $p)
+                <option value="{{ $p->id }}">{{ $p->nama }}</option>
+                @endforeach
+           
+            </select>
               </div>
               <div class="form-group">
              <div class="form-group">
@@ -51,7 +59,6 @@
                 @foreach($kategori as $k)
                 <option value="{{ $k->id }}">{{ $k->nama }}</option>
                 @endforeach
-           
             </select>
               </div>
               <div class="form-group">
@@ -73,7 +80,10 @@
         <div class="col-lg">
            <div class="mb-3">
   <label for="sampul">Foto Sampul</label>
-  <input class="form-control" type="file" id="sampul" name="sampul">
+  <input class="form-control @error('sampul') is-invalid @enderror" type="file" id="sampul" name="sampul" value="{{old('sampul') }}">
+  @error('sampul')
+  <div class="invalid-feedback">{{ $message}}</div>
+  @enderror
 </div>
 </div>
   </div>

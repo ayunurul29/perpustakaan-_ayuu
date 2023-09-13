@@ -13,7 +13,7 @@
           </div>
 
           <div class="card-body">
-            <form action="{{ route('penulis_update', $item->id) }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('penerbit_update', $item->id) }}" method="POST" enctype="multipart/form-data">
               @csrf
                     
               <div class="form-group">

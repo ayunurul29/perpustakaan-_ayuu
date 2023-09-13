@@ -27,7 +27,7 @@
         <table class="table table-bordered">
             <tr>
                 <th style="width: 180px">Nama</th>
-                <td>{{ $data->buku->nama }}</td>
+                <td>{{ $data->nama }}</td>
             </tr>
             <tr>
                 <th style="width: 180px">Tahun Terbit</th>
@@ -50,8 +50,8 @@
                 <td>{{ $data->sinopsis }}</td>
             </tr>
              <tr>
-                <th style="width: 180px">Judul</th>
-                <td>{{ $data->judul }}</td>
+                <th style="width: 180px">Jumlah</th>
+                <td>{{ $data->jumlah }}</td>
             </tr>
             <tr>
                 <th style="width: 180px">Sampul</th>

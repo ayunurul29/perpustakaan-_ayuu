@@ -5,14 +5,14 @@
 <div class="content-header">
     <div class="container-fluid">
         <div class="row mb-2">
-            <h3>Peminjaman</h3>
+            <h3>Penerbit</h3>
         </div>
     </div>
 </div>
 
 <div class="card card-primary">
     <div class="card-header">
-        <h2 class="card-title">Data Penulis</h2>
+        <h2 class="card-title">Data Penerbit</h2>
     </div>
 
     @if ($message = Session::get('success'))
@@ -22,11 +22,11 @@
     @endif
     <div class="card-body">
          <div style="margin-bottom: 20px">
-            <a href="{{ route('penulis_index') }}" class="btn btn-primary btn-flat">Kembali</a>
+            <a href="{{ route('penerbit_index') }}" class="btn btn-primary btn-flat">Kembali</a>
         </div>
         <table class="table table-bordered">
             <tr>
-                <th style="width: 180px">Nama Penulis</th>
+                <th style="width: 180px">Nama Penerbit</th>
                 <td>{{ $data->nama }}</td>
             </tr>
             <tr>
@@ -37,15 +37,14 @@
                 <th style="width: 180px">Telepon</th>
                 <td>{{ $data->telepon}}</td>
             </tr>
-             <tr>
+           <tr>
                 <th style="width: 180px">Email</th>
                 <td>{{ $data->email}}</td>
-                  <tr>
+            </tr>
+              <tr>
                 <th style="width: 180px">Jumlah Buku</th>
                 <td>{{ $data->jumlah}}</td>
             </tr>
-            </tr>
-           
         </table>
     </div>
 </div>

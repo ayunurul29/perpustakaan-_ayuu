@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Buku;
+use App\Models\Penerbit;
+use App\Models\Penulis;
 use App\Models\Kategori;
-use App\Models\Peminjaman;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Storage;
@@ -20,7 +21,6 @@ class BukuController extends Controller
         return view('pages.admin.buku.index', [
             'title' => 'Buku',
             'buku' => Buku::all(),
-
         ]);
     }
 
@@ -32,8 +32,8 @@ class BukuController extends Controller
         return view('pages.admin.buku.create', [
             'title' => 'Tambah buku',
             'kategori' => Kategori::all(),
-            'peminjaman' => Peminjaman::all(),
-            
+            'penerbit' => Penerbit::all(),
+             'penulis' => Penulis::all(),
         ]);
     }
 
@@ -49,7 +49,7 @@ class BukuController extends Controller
             'id_penerbit' => 'required',
             'id_kategori' => 'required',
             'sinopsis' => 'required',
-             'jumlah' => 'required',
+            'jumlah' => 'required',
             'sampul' => 'image|file',
         ]);
 
@@ -65,12 +65,11 @@ class BukuController extends Controller
             'id_penerbit' => $request->id_penerbit,
             'id_kategori' => $request->id_kategori,
             'sinopsis' => $request->sinopsis,
-              'jumlah' => $request->jumlah,
+            'jumlah' => $request->jumlah,
             'sampul' => $path
 
         ]);
-
-        return Redirect::route('buku_index')->with('toast_success', 'Data berhasil di tambahkan ');
+        return Redirect::route('buku_index')->with('toast_success', 'Data Berhasil Ditambahkan!');
     }
 
     /**
@@ -92,13 +91,14 @@ class BukuController extends Controller
     {
         $item = Buku::findOrFail($id);
         $kategoris = Kategori::all();
-        $peminjaman = Peminjaman::all();
-        
+        $penerbits = Penerbit::all();
+        $penulis = Penulis::all();
 
         return view('pages.admin.buku.edit', [
             'item' => $item,
             'kategoris' => $kategoris,
-             'peminjaman' => $peminjaman,
+            'penerbits' => $penerbits ,
+            'penulis' => $penulis,
         ]);
     }
 
@@ -114,11 +114,11 @@ class BukuController extends Controller
             'id_penerbit' => 'required',
             'id_kategori' => 'required',
             'sinopsis' => 'required',
-             'jumlah' => 'required',
+            'jumlah' => 'required',
             'sampul' => 'required',
         ]);
 
-          $file = $request->file('sampul');
+        $file = $request->file('sampul');
         $path = time() . '_' . $request->name . '.' . $file->getClientOriginalExtension();
 
         Storage::disk('local')->put('public/' . $path, file_get_contents($file));
@@ -130,11 +130,11 @@ class BukuController extends Controller
             'id_penerbit' => $request->id_penerbit,
             'id_kategori' => $request->id_kategori,
             'sinopsis' => $request->sinopsis,
-                'jumlah' => $request->jumlah,
+            'jumlah' => $request->jumlah,
             'sampul' => $path
         ]);
 
-        return redirect()->route('buku_index')->with('toast_success', 'Data berhasil di Rubah ');
+        return redirect()->route('buku_index')->with('toast_success', 'Data Berhasil Dirubah!');
     }
 
     /**
@@ -144,6 +144,6 @@ class BukuController extends Controller
     {
         Buku::destroy($buku->id);
 
-        return redirect('/buku')->with('toast_success', 'Data berhasil di Hapus  ');
+        return redirect('/buku')->with('toast_success', 'Data Berhasil Dihapus!');
     }
 }
