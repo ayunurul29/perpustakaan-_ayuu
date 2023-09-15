@@ -23,21 +23,21 @@
                 <label for="tahun_terbit">Tahun Terbit</label>
                 <input type="text" class="form-control" id="tahun_terbit" name="tahun_terbit" placeholder="Enter tahun terbit" value="{{ $item->tahun_terbit }}">
               </div>
-              <div class="form-group">
-                <label for="id_penulis">Penulis</label>
-                 <select class="form-control" id="id_penulis" name="id_penulis" class="form-control">
-                <option value="">Pilih Penulis</option>
+               <div class="form-group">
+                <label for="id_penulis">penulis</label>
+                <select class="form-control" id="id_penulis" name="id_penulis" class="form-control">
+                <option value="">Pilih penulis</option>
                 @foreach($penulis as $pen)
                 <option value="{{ $pen->id }}" {{ $pen->id == $item->id_penulis ? 'selected' : '' }}>{{ $pen->nama }}</option>
                 @endforeach
             </select>
               </div>
-              <div class="form-group">
+        <div class="form-group">
                 <label for="id_penerbit">Penerbit</label>
-                 <select class="form-control" id="id_penerbit" name="id_penerbit" class="form-control">
+                <select class="form-control" id="id_penerbit" name="id_penerbit" class="form-control">
                 <option value="">Pilih Penerbit</option>
-                @foreach($penerbits as $penerbit)
-                <option value="{{ $penerbit->id }}" {{ $penerbit->id == $item->id_penerbit ? 'selected' : '' }}>{{ $penerbit->nama }}</option>
+                @foreach($penerbits as $pen)
+                <option value="{{ $pen->id }}" {{ $pen->id == $item->id_penerbit ? 'selected' : '' }}>{{ $pen->nama }}</option>
                 @endforeach
             </select>
               </div>
@@ -54,10 +54,7 @@
                 <label for="sinopsis">Sinopsis</label>
                 <input type="text" class="form-control" id="sinopsis" name="sinopsis" placeholder="Enter sinopsis" value="{{ $item->sinopsis }}">
               </div>
-              <div class="form-group">
-                <label for="jumlah">Jumlah</label>
-                <input type="text" class="form-control" id="jumlah" name="jumlah" placeholder="Enter jumlah" value="{{ $item->jumlah }}">
-              </div>
+              
               <div class="form-group">
                 <label for="sampul">Sampul</label>
                 <input type="file" class="form-control" id="sampul" name="sampul" placeholder="Enter sampul" value="{{ $item->sampul }}">

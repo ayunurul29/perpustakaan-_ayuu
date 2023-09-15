@@ -11,13 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('penulis', function (Blueprint $table) {
-            $table->id();
+        Schema::create('penerbits', function (Blueprint $table) {
+             $table->id();
             $table->string('nama');
             $table->string('alamat');
             $table->string('telepon');
             $table->string('email');
-         
+           
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('penulis');
+        Schema::dropIfExists('penerbits');
     }
 };

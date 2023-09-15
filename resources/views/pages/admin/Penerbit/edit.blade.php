@@ -32,10 +32,7 @@
                 <label for="email">Email</label>
                 <input type="text" class="form-control" id="email" name="email" placeholder="Enter penerbit" value="{{ $item->email }}">
               </div>
-               <div class="form-group">
-                <label for="jumlah">Jumlah</label>
-                <input type="text" class="form-control" id="jumlah" name="jumlah" placeholder="Enter jumlah" value="{{ $item->jumlah }}">
-              </div>
+              
           <div class="card-footer">
             <button type="submit" class="btn btn-primary">Submit</button>
           </div>

@@ -27,6 +27,7 @@ use App\Http\Controllers\PenerbitController;
 //     return view('home');
 // });
 
+// LOGIN
 Route::get('/', [LoginController::class, 'login'])->name('login');
 Route::post('actionlogin', [LoginController::class, 'actionlogin'])->name('actionlogin');
 
@@ -40,6 +41,8 @@ Route::post('register/action', [RegisterController::class, 'actionregister'])->n
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//template
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 
 //BUKU
@@ -63,7 +66,7 @@ Route::get('/kategori/edit/{id}', [KategoriController::class, 'edit'])->name('ka
 Route::post('/kategori/update/{kategori}', [KategoriController::class, 'update'])->name('kategori_update');
 Route::post('/kategori/destroy/{kategori}', [KategoriController::class, 'destroy'])->name('kategori_destroy');
  
- //peminjaman
+ //PEMINJAMAN
 Route::get('/peminjaman', [PeminjamanController::class, 'index'])->name('peminjaman_index');
 Route::get('/peminjaman/create', [PeminjamanController::class, 'create'])->name('peminjaman_create');
 Route::post('/peminjaman/store', [PeminjamanController::class, 'store'])->name('peminjaman_store');
@@ -75,7 +78,7 @@ Route::post('/peminjaman/destroy/{peminjaman}', [PeminjamanController::class, 'd
  Route::get('/peminjaman/show/{id}', [PeminjamanController::class, 'show'])->name('peminjaman_show');
 
  
- //penulis
+ //PENULIS
 Route::get('/penulis', [PenulisController::class, 'index'])->name('penulis_index');
 Route::get('/penulis/create', [PenulisController::class, 'create'])->name('penulis_create');
 Route::post('/penulis/store', [PenulisController::class, 'store'])->name('penulis_store');
@@ -86,7 +89,7 @@ Route::post('/penulis/update/{penulis}', [PenulisController::class, 'update'])->
 Route::post('/penulis/destroy/{penulis}', [PenulisController::class, 'destroy'])->name('penulis_destroy');
  Route::get('/penulis/show/{id}', [PenulisController::class, 'show'])->name('penulis_show');
 
- //penerbit
+ //PENERBIT
 Route::get('/penerbit', [PenerbitController::class, 'index'])->name('penerbit_index');
 Route::get('/penerbit/create', [PenerbitController::class, 'create'])->name('penerbit_create');
 Route::post('/penerbit/store', [PenerbitController::class, 'store'])->name('penerbit_store');
@@ -105,3 +108,5 @@ Route::middleware(['auth', 'admin'])->group(function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+

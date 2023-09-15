@@ -40,8 +40,6 @@
                         <th style="text-align:center;">Email</th>
                         <th style="text-align:center;">Jumlah Buku</th>
                         <th width="250px" style="text-align: center;">Action</th>
-
-                        
                     </tr>
                 </thead>
                 @foreach($penulis as $pen)
@@ -52,7 +50,7 @@
                         <td style="text-align:center">{{ $pen->alamat }}</td>
                         <td style="text-align:center">{{ $pen->telepon }}</td>
                         <td style="text-align:center">{{ $pen->email }}</td>
-                        <td style="text-align:center">{{ $pen->jumlah }}</td>
+                        <td style="text-align:center">{{ $pen->getJumlahBuku()  }}</td>
                         </td>
                         <td style="text-align:center">
 

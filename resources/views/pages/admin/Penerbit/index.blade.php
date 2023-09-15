@@ -2,13 +2,7 @@
 
 @section('content')
 
-<div class="content-header">
-    <div class="container-fluid">
-        <div class="row mb-2">
-            <h3>Penerbit</h3>
-        </div>
-    </div>
-</div>
+
 
 
 <div class="card card-primary">
@@ -52,7 +46,7 @@
                         <td style="text-align:center">{{ $p->alamat }}</td>
                         <td style="text-align:center">{{ $p->telepon }}</td>
                         <td style="text-align:center">{{ $p->email }}</td>
-                        <td style="text-align:center">{{ $p->jumlah }}</td>
+                        <td style="text-align:center">{{ $p->getJumlahBuku()  }}</td>
                         </td>
                         <td style="text-align:center">
 

@@ -29,36 +29,34 @@
                 <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
               </div>
-               <div class="form-group">
-             <div class="form-group">
-                <label for="id_penulis">Nama Penulis</label>
+                <div class="form-group">
+                <label for="id_penulis">Penulis</label>
                 <select class="form-control" id="id_penulis" name="id_penulis" >
-                <option selected>Pilih Penulis</option>
+                <option disabled value>Pilih Penulis</option>
                 @foreach($penulis as $p)
                 <option value="{{ $p->id }}">{{ $p->nama }}</option>
                 @endforeach
            
             </select>
               </div>
-               <div class="form-group">
              <div class="form-group">
-                <label for="id_penerbit">Nama Penerbit</label>
+                <label for="id_penerbit">Penerbit</label>
                 <select class="form-control" id="id_penerbit" name="id_penerbit" >
-                <option selected>Pilih Kategori</option>
+               <option disabled value>Pilih Penerbit</option>
                 @foreach($penerbit as $p)
                 <option value="{{ $p->id }}">{{ $p->nama }}</option>
                 @endforeach
            
             </select>
               </div>
-              <div class="form-group">
              <div class="form-group">
                 <label for="id_kategori">Kategori</label>
                 <select class="form-control" id="id_kategori" name="id_kategori" >
-                <option selected>Pilih Kategori</option>
+          <option disabled value>Pilih Kategori</option>
                 @foreach($kategori as $k)
                 <option value="{{ $k->id }}">{{ $k->nama }}</option>
                 @endforeach
+           
             </select>
               </div>
               <div class="form-group">
@@ -68,22 +66,13 @@
                 <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
               </div>
-                <div class="form-group">
-                <label for="jumlah">Jumlah</label>
-                <input type="text" class="form-control @error('jumlah') is-invalid @enderror" id="jumlah" name="jumlah" value="{{ old('jumlah') }}" placeholder="Enter jumlah" >
-                @error('jumlah')
-                <div class="invalid-feedback">{{ $message }}</div>
-                @enderror
-              </div>
+               
               <div class="form-group">
                  <div class="row">
         <div class="col-lg">
            <div class="mb-3">
   <label for="sampul">Foto Sampul</label>
-  <input class="form-control @error('sampul') is-invalid @enderror" type="file" id="sampul" name="sampul" value="{{old('sampul') }}">
-  @error('sampul')
-  <div class="invalid-feedback">{{ $message}}</div>
-  @enderror
+  <input class="form-control" type="file" id="sampul" name="sampul">
 </div>
 </div>
   </div>

@@ -14,5 +14,24 @@ class Kategori extends Model
     {
         return $this->belongsTo(Buku::class);
     }
+      public static function findarrayGrafikKategori()
+    {
+        $listKategori = Kategori::all();
+
+        $arrayData = [];
+
+
+
+        foreach ($listKategori as $key => $k) {
+            $arrayData = [
+                'name' => $k->id,
+                'kategori' => $k->nama,
+            ];
+        }
+
+        return $arrayData;
+    }
+
 
 }
+

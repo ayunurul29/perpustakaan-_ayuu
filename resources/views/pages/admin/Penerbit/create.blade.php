@@ -43,14 +43,7 @@
                 <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
               </div>
-              <div class="form-group">
-                <label for="jumlah">Jumlah</label>
-                <input type="text" class="form-control @error('jumlah') is-invalid @enderror" id="jumlah" name="jumlah" value="{{ old('jumlah') }}" placeholder="Enter jumlah">
-                @error('jumlah')
-                <div class="invalid-feedback">{{ $message }}</div>
-                @enderror
-              </div>
-          </div>
+             
           <div class="card-footer">
             <button type="submit" class="btn btn-primary">Submit</button>
           </div>

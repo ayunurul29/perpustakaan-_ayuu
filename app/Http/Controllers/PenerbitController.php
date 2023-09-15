@@ -39,7 +39,7 @@ class PenerbitController extends Controller
             'alamat' => 'required',
             'telepon' => 'required',
             'email' => 'required',
-            'jumlah' => 'required',
+          
         
             
         ]);
@@ -49,7 +49,7 @@ class PenerbitController extends Controller
             'alamat' => $request->alamat,
             'telepon' => $request->telepon,
             'email' => $request->email,
-            'jumlah' => $request->jumlah,
+    
            
 
         ]);
@@ -91,7 +91,7 @@ class PenerbitController extends Controller
             'alamat' => 'required',
             'telepon' => 'required',
             'email' => 'required',
-            'jumlah' => 'required',
+          
            
            
         ]);
@@ -101,7 +101,7 @@ class PenerbitController extends Controller
             'alamat' => $request->alamat,
             'telepon' => $request->telepon,
             'email' => $request->email,
-            'jumlah' => $request->jumlah,
+    
             
         ]);
 

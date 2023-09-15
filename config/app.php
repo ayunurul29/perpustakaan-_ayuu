@@ -173,6 +173,7 @@ return [
 
     ])->toArray(),
 
+
     /*
     |--------------------------------------------------------------------------
     | Class Aliases
@@ -190,3 +191,4 @@ return [
     RealRashid\SweetAlert\SweetAlertServiceProvider::class,
 
 ];
+
