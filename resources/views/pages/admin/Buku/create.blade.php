@@ -17,14 +17,14 @@
               @csrf
                  <div class="form-group">
                 <label for="nama">Nama Buku</label>
-                <input type="text" class="form-control @error('nama') is-invalid @enderror" id="nama" name="nama" value="{{ old('nama') }}" placeholder="Enter nama" >
+                <input type="text" class="form-control @error('nama') is-invalid @enderror" id="nama" name="nama"placeholder="Enter nama" >
                 @error('nama')
                 <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
               </div>
              <div class="form-group">
                 <label for="tahun_terbit">Tahun Terbit</label>
-                <input type="text" class="form-control @error('tahun_terbit') is-invalid @enderror" id="tahun_terbit" name="tahun_terbit" value="{{ old('tahun_terbit') }}" placeholder="Enter nama" >
+                <input type="text" class="form-control @error('tahun_terbit') is-invalid @enderror" id="tahun_terbit" name="tahun_terbit"  placeholder="Enter nama" >
                 @error('tahun_terbit')
                 <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
@@ -61,8 +61,15 @@
               </div>
               <div class="form-group">
                 <label for="sinopsis">Sinopsis</label>
-                <input type="text" class="form-control @error('sinopsis') is-invalid @enderror" id="sinopsis" name="sinopsis" value="{{ old('sinopsis') }}" placeholder="Enter sinopsis" >
+                <input type="text" class="form-control @error('sinopsis') is-invalid @enderror" id="sinopsis" name="sinopsis" placeholder="Enter sinopsis" >
                 @error('sinopsis')
+                <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
+              </div>
+                   <div class="form-group">
+                <label for="jumlah">Jumlah Buku</label>
+                <input type="text" class="form-control @error('jumlah') is-invalid @enderror" id="jumlah" name="jumlah" placeholder="Enter jumlah" >
+                @error('jumlah')
                 <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
               </div>

@@ -22,6 +22,12 @@
             <a href="{{ route('penerbit_create') }}" class="btn btn-primary btn-flat">
                 <i class="fa fa-plus-circle"></i> Tambah Data
             </a>
+              <a href="{{ url('penerbit') }}" class="btn btn-danger btn-flat">
+                <i class="fa fa-file-pdf"></i> Export PDF
+            </a>
+               <a href="{{ url('penerbit') }}" class="btn btn-success btn-flat">
+                <i class="fa fa-file-excel"></i> Export Excel
+            </a>
         </div>
         <div style="overflow: auto">
             <table class="table table-bordered table-condensed">

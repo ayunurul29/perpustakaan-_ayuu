@@ -39,7 +39,7 @@ class PeminjamanController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nama' => 'required',
+            'id_buku' => 'required',
             'id_anggota' => 'required',
             'tanggal_pinjam' => 'required',
             'tanggal_kembali' => 'required',

@@ -47,6 +47,7 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard
 
 //BUKU
 Route::get('/buku', [BukuController::class, 'index'])->name('buku_index');
+Route::get('/excel', [BukuController::class, 'excel'])->name('buku');
 Route::get('/buku/create', [BukuController::class, 'create'])->name('buku_create');
 Route::post('/buku/store', [BukuController::class, 'store'])->name('buku_store');
 Route::post('/buku/show', [BukuController::class, 'show'])->name('buku_show');
@@ -59,6 +60,7 @@ Route::post('/buku/destroy/{buku}', [BukuController::class, 'destroy'])->name('b
 
 //KATEGORI
 Route::get('/kategori', [KategoriController::class, 'index'])->name('kategori_index');
+Route::get('/excel', [KategoriController::class, 'excel'])->name('kategori');
 Route::get('/kategori/create', [KategoriController::class, 'create'])->name('kategori_create');
 Route::post('/kategori/store', [KategoriController::class, 'store'])->name('kategori_store');
 
@@ -68,6 +70,7 @@ Route::post('/kategori/destroy/{kategori}', [KategoriController::class, 'destroy
  
  //PEMINJAMAN
 Route::get('/peminjaman', [PeminjamanController::class, 'index'])->name('peminjaman_index');
+Route::get('/excel', [PeminjamanController::class, 'excel'])->name('peminjaman');
 Route::get('/peminjaman/create', [PeminjamanController::class, 'create'])->name('peminjaman_create');
 Route::post('/peminjaman/store', [PeminjamanController::class, 'store'])->name('peminjaman_store');
 Route::post('/peminjaman/show', [PeminjamanController::class, 'show'])->name('peminjaman_show');
@@ -80,6 +83,7 @@ Route::post('/peminjaman/destroy/{peminjaman}', [PeminjamanController::class, 'd
  
  //PENULIS
 Route::get('/penulis', [PenulisController::class, 'index'])->name('penulis_index');
+Route::get('/excel', [PenulisController::class, 'excel'])->name('penulis');
 Route::get('/penulis/create', [PenulisController::class, 'create'])->name('penulis_create');
 Route::post('/penulis/store', [PenulisController::class, 'store'])->name('penulis_store');
 Route::post('/penulis/show', [PenulisController::class, 'show'])->name('penulis_show');
@@ -91,6 +95,7 @@ Route::post('/penulis/destroy/{penulis}', [PenulisController::class, 'destroy'])
 
  //PENERBIT
 Route::get('/penerbit', [PenerbitController::class, 'index'])->name('penerbit_index');
+Route::get('/excel', [PernerbitController::class, 'excel'])->name('penerbit');
 Route::get('/penerbit/create', [PenerbitController::class, 'create'])->name('penerbit_create');
 Route::post('/penerbit/store', [PenerbitController::class, 'store'])->name('penerbit_store');
 Route::post('/penerbit/show', [PenerbitController::class, 'show'])->name('penerbit_show');

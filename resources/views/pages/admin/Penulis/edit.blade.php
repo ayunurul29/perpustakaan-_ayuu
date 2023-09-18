@@ -13,44 +13,33 @@
           </div>
 
           <div class="card-body">
-            <form action="{{ route('penulis_store') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('penulis_update', $item->id) }}" method="POST" enctype="multipart/form-data">
               @csrf
-      
-                <div class="form-group">
+               <div class="form-group">
                 <label for="nama">Nama Penulis</label>
-                <input type="text" class="form-control @error('nama') is-invalid @enderror" id="nama" name="nama" value="{{ old('nama') }}" placeholder="Enter nama" >
-                @error('nama')
-                <div class="invalid-feedback">{{ $message }}</div>
-                @enderror
-              </div>
-             <div class="form-group">
-                <label for="alamat">Alamat</label>
-                <input type="text" class="form-control @error('alamat') is-invalid @enderror" id="alamat" name="alamat" value="{{ old('alamat') }}" placeholder="Enter nama" >
-                @error('alamat')
-                <div class="invalid-feedback">{{ $message }}</div>
-                @enderror
+                <input type="text" class="form-control" id="nama" name="nama" placeholder="Enter nama penulis" value="{{ $item->nama }}">
               </div>
               <div class="form-group">
-                <label for="telepon">Telepon </label>
-                <input type="date" class="form-control @error('telepon') is-invalid @enderror" id="telepon" name="telepon" value="{{ old('telepon') }}" placeholder="Enter telepon" >
-                @error('telepon')
-                <div class="invalid-feedback">{{ $message }}</div>
-                @enderror
+                <label for="alamat">Alamat</label>
+                <input type="text" class="form-control" id="alamat" name="alamat" placeholder="Enter alamat" value="{{ $item->alamat }}">
               </div>
-             <div class="form-group">
+              <div class="form-group">
+                <label for="telepon">Telepon</label>
+                <input type="text" class="form-control" id="telepon" name="telepon" placeholder="Enter telepon" value="{{ $item->telepon }}">
+              </div>
+              <div class="form-group">
                 <label for="email">Email</label>
-                <input type="date" class="form-control @error('email') is-invalid @enderror" id="email" name="email" value="{{ old('email') }}" placeholder="Enter email" >
-                @error('email')
-                <div class="invalid-feedback">{{ $message }}</div>
-                @enderror
+                <input type="text" class="form-control" id="email" name="email" placeholder="Enter email" value="{{ $item->email }}">
               </div>
-            
-           
+              <div class="form-group">
+                <label for="jumlah">Jumlah</label>
+                <input type="text" class="form-control" id="jumlah" name="jumlah" placeholder="Enter jumlah" value="{{ $item->jumlah }}">
               </div>
-          </div>
-          <div class="card-footer">
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </div>
+            </div>
+            <div class="card-footer">
+              <a href="{{ route('penulis_index') }}" class="btn btn-info">Back</a>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
           </form>
 
         </div>
