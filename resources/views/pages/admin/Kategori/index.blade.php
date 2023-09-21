@@ -25,10 +25,11 @@
 
     <div class="card-body">
         <div style="margin-bottom: 20px">
+            
             <a href="{{ route('kategori_create') }}" class="btn btn-primary btn-flat">
                 <i class="fa fa-plus-circle"></i> Tambah Data
             </a>
-              <a href="{{ url('data') }}" class="btn btn-danger btn-flat">
+              <a href="{{ url('kategori-pdf') }}" class="btn btn-danger btn-flat">
                 <i class="fa fa-file-pdf"></i> Export PDF
             </a>
               <a href="{{ url('data kategori') }}" class="btn btn-success btn-flat">

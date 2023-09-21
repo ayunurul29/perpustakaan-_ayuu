@@ -23,8 +23,8 @@
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-                        <li class="nav-item menu-open">
-                            <a href="{{ url('/dashboard') }}" class="nav-link active">
+                        <li class="nav-item ">
+                            <a href="{{ url('/dashboard') }}" class="nav-link  {{ Request::is('dashboard') ? 'active':''}}">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Dashboard
@@ -32,37 +32,37 @@
                                 </p>
                             </a>
                     <li class="nav-item">
-                <a href="./buku" class="nav-link">
+                <a href="./buku" class="nav-link  {{ Request::is('buku') ? 'active':''}}">
                   <i class="fas fa-fw fa-book"></i>
                   <p>Buku</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./penulis" class="nav-link">
+                <a href="./penulis" class="nav-link  {{ Request::is('penulis') ? 'active':''}}">
                   <i class="fas fa-fw fa-pencil"></i>
                   <p>Penulis</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./penerbit" class="nav-link">
+                <a href="./penerbit" class="nav-link  {{ Request::is('penerbit') ? 'active':''}}">
                   <i class="fas fa-fw fa-user"></i>
                   <p>Penerbit</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./kategori" class="nav-link">
+                <a href="./kategori" class="nav-link  {{ Request::is('kategori') ? 'active':''}}">
                   <i class="fas fa-fw fa-tags"></i>
                   <p>Kategori</p>
                 </a>
               </li>
                <li class="nav-item">
-                <a href="./peminjaman" class="nav-link">
+                <a href="./peminjaman" class="nav-link  {{ Request::is('peminjaman') ? 'active':''}}">
                   <i class="fas fa-fw fa-hand-holding-dollar"></i>
                   <p>peminjaman</p>
                 </a>
               </li>
                <li class="nav-item">
-                <a href="{{ url ('/actionlogout') }}" class="nav-link">
+                <a href="{{ url ('/actionlogout') }}" class="nav-link  {{ Request::is('logout') ? 'active':''}}">
                   <i class="fas fa-fw  fa-arrow-left"></i>
                   <p>logout</p>
                 </a>

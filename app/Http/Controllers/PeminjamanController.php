@@ -6,6 +6,7 @@ use App\Models\Peminjaman;
 use App\Models\Buku;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use PDF;
 
 class PeminjamanController extends Controller
 {
@@ -129,4 +130,32 @@ class PeminjamanController extends Controller
 
         return redirect('/peminjaman')->with('toast_success', 'Data Berhasil Dihapus!');
     }
+  public function generatePDF()
+    {
+        $peminjaman = peminjaman::get();
+  
+        $data = [
+            'peminjaman' => $peminjaman,
+        ]; 
+            
+        $pdf = PDF::loadView('pages.admin.peminjaman.myPDF', $data);
+     
+        return $pdf->stream();
+    }
+  public function search(Request $request)
+{
+    // menangkap data pencarian
+if($request->has('search')){
+    $peminjaman = Peminjaman::where('tanggal_kembali','LIKE',"%".$request->search."%")->get();
 }
+ 
+ else{
+    $peminjaman= Peminjaman::all();
+ }
+   
+    return view('pages.admin.peminjaman.index',[
+        'peminjaman' => $peminjaman,
+    ]);
+ 
+}
+} 

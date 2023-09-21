@@ -9,7 +9,7 @@ use App\Models\Kategori;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Storage;
-
+use PDF;
 
 class BukuController extends Controller
 {
@@ -23,7 +23,7 @@ class BukuController extends Controller
             'buku' => Buku::all(),
 
         ]);
-    }
+    } 
 
     /**
      * Show the form for creating a new resource.
@@ -150,4 +150,33 @@ class BukuController extends Controller
 
         return redirect('/buku')->with('toast_success', 'Data berhasil di Hapus  ');
     }
+
+public function generatePDF()
+    {
+        $buku = Buku::get();
+  
+        $data = [
+            'buku' => $buku,
+        ]; 
+            
+        $pdf = PDF::loadView('pages.admin.buku.myPDF', $data);
+     
+        return $pdf->stream();
+    }
+    public function search(Request $request)
+{
+    // menangkap data pencarian
+if($request->has('search')){
+    $buku = Buku::where('nama','LIKE',"%".$request->search."%")->get();
 }
+ 
+ else{
+    $buku= Buku::all();
+ }
+   
+    return view('pages.admin.buku.index',[
+        'buku' => $buku,
+    ]);
+ 
+}
+} 
