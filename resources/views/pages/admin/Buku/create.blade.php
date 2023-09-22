@@ -24,7 +24,7 @@
               </div>
              <div class="form-group">
                 <label for="tahun_terbit">Tahun Terbit</label>
-                <input type="text" class="form-control @error('tahun_terbit') is-invalid @enderror" id="tahun_terbit" name="tahun_terbit"  placeholder="Enter nama" >
+                <input type="text" class="form-control @error('tahun_terbit') is-invalid @enderror" id="tahun_terbit" name="tahun_terbit"  placeholder="tahun terbit" >
                 @error('tahun_terbit')
                 <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
@@ -32,7 +32,7 @@
                 <div class="form-group">
                 <label for="id_penulis">Penulis</label>
                 <select class="form-control" id="id_penulis" name="id_penulis" >
-                <option disabled value>Pilih Penulis</option>
+                <option  value>Pilih Penulis</option>
                 @foreach($penulis as $p)
                 <option value="{{ $p->id }}">{{ $p->nama }}</option>
                 @endforeach
@@ -42,33 +42,33 @@
              <div class="form-group">
                 <label for="id_penerbit">Penerbit</label>
                 <select class="form-control" id="id_penerbit" name="id_penerbit" >
-               <option disabled value>Pilih Penerbit</option>
+               <option value>Pilih Penerbit</option>
                 @foreach($penerbit as $p)
                 <option value="{{ $p->id }}">{{ $p->nama }}</option>
                 @endforeach
            
-            </select>
-              </div>
-             <div class="form-group">
+                </select>
+                </div>
+                <div class="form-group">
                 <label for="id_kategori">Kategori</label>
                 <select class="form-control" id="id_kategori" name="id_kategori" >
-          <option disabled value>Pilih Kategori</option>
+                <option value>Pilih Kategori</option>
                 @foreach($kategori as $k)
                 <option value="{{ $k->id }}">{{ $k->nama }}</option>
                 @endforeach
            
-            </select>
-              </div>
-              <div class="form-group">
+                </select>
+                </div>
+                <div class="form-group">
                 <label for="sinopsis">Sinopsis</label>
-                <input type="text" class="form-control @error('sinopsis') is-invalid @enderror" id="sinopsis" name="sinopsis" placeholder="Enter sinopsis" >
+                <input type="text" class="form-control @error('sinopsis') is-invalid @enderror" id="sinopsis" name="sinopsis" placeholder=" sinopsis" >
                 @error('sinopsis')
                 <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
-              </div>
+                </div>
                    <div class="form-group">
                 <label for="jumlah">Jumlah Buku</label>
-                <input type="text" class="form-control @error('jumlah') is-invalid @enderror" id="jumlah" name="jumlah" placeholder="Enter jumlah" >
+                <input type="text" class="form-control @error('jumlah') is-invalid @enderror" id="jumlah" name="jumlah" placeholder="jumlah buku" >
                 @error('jumlah')
                 <div class="invalid-feedback">{{ $message }}</div>
                 @enderror

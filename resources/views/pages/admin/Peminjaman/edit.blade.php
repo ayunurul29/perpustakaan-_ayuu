@@ -49,6 +49,8 @@
 
           <div class="card-footer">
             <button type="submit" class="btn btn-primary">Submit</button>
+
+            <a href="{{ route('peminjaman_index') }}" class="btn btn-primary btn-flat">Kembali</a>
           </div>
           </form>
 

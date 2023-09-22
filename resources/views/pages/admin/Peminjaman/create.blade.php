@@ -57,7 +57,7 @@
               </div>
                  <div class="form-group">
                 <label for="id_status_peminjaman">Status Peminjam</label>
-                <input type="text" class="form-control @error('id_status_peminjaman') is-invalid @enderror" id="id_status_peminjaman" name="id_status_peminjaman" value="{{ old('id_status_peminjaman') }}" placeholder="Enter statuspeminjaman" >
+                <input type="text" class="form-control @error('id_status_peminjaman') is-invalid @enderror" id="id_status_peminjaman" name="id_status_peminjaman" value="{{ old('id_status_peminjaman') }}" placeholder="Enter status peminjaman" >
                 @error('id_status_peminjaman')
                 <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
@@ -76,6 +76,4 @@
     </div>
   </div>
 </section>
-
-
 @endsection

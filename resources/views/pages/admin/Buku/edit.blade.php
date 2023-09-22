@@ -65,7 +65,9 @@
           </div>
           <div class="card-footer">
             <button type="submit" class="btn btn-primary">Submit</button>
-          </div>
+
+            <a href="{{ route('buku_index') }}" class="btn btn-primary btn-flat">Kembali</a>
+        </div>
           </form>
 
         </div>

@@ -40,7 +40,7 @@
             <a href="{{ route('buku_create') }}" class="btn btn-primary btn-flat">
                 <i class="fa fa-plus-circle"></i> Tambah Data
             </a>
-            <a href="{{ url('export_data') }}" class="btn btn-success btn-flat">
+            <a href="{{ url('export-data') }}" class="btn btn-success btn-flat">
                 <i class="fa fa-file-excel"></i> Export Excel
             </a>
              <a href="{{ url('generate-pdf') }}" class="btn btn-danger btn-flat">
@@ -60,7 +60,7 @@
                         <th style="text-align:center;">Kategori</th>
                         <th width="200px" style="text-align: center;">Sinopsis</th>
                         <th style="text-align:center;">Jumlah</th>
-                        <th style="text-align:center;">Sampul</th>
+                       <th style="text-align:center;">Sampul Buku</th>
                         <th width="250px" style="text-align: center;">Action</th>
                     </tr>
                 </thead>

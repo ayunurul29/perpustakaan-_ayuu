@@ -37,7 +37,8 @@
               </div>
             </div>
             <div class="card-footer">
-              <a href="{{ route('penulis_index') }}" class="btn btn-info">Back</a>
+      
+            <a href="{{ route('penulis_index') }}" class="btn btn-primary btn-flat">Kembali</a>
               <button type="submit" class="btn btn-primary">Submit</button>
             </div>
           </form>

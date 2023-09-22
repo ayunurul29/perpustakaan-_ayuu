@@ -25,7 +25,6 @@
             <th>Penulis</th>
             <th>Penerbit</th>
             <th>Kategori</th>
-           
             <th width="100px">Sinopsis</th>
             <th>Sampul</th>
         </tr>

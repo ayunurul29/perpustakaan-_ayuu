@@ -16,5 +16,4 @@ class Peminjaman extends Model
         return $this->belongsTo(Buku::class,'id_buku');
     }
 
-  
-}
+   }

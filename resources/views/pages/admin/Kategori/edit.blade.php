@@ -21,8 +21,10 @@
               </div>
              
           </div>
-          <div class="card-footer">
-            <button type="submit" class="btn btn-primary">Submit</button>
+          <div class="card-footer">   
+
+            <a href="{{ route('kategori_index') }}" class="btn btn-primary btn-flat">Kembali</a>
+                        <button type="submit" class="btn btn-primary">Submit</button>
           </div>
           </form>
 

@@ -79,7 +79,7 @@
                 <p>Peminjaman</p>
               </div>
               <div class="icon">
-                <i class="nav-icon fas fa-list"></i>
+                <i class="nav-icon fas fa-hand-holding-dollar"></i>
               </div>
               <a href="{{ route('peminjaman_index') }}" target="_blank" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
@@ -164,8 +164,8 @@ Highcharts.chart('penerbit', {
     xAxis: {
         categories: [
             'Gramedia',
-            'Kompas',
-            'Alvi Ardhi Publishing',
+            'Bentang Pustaka',
+            'PT. Bukune Kreatif Cipta',
         ],
         crosshair: true
     },
@@ -210,7 +210,7 @@ Highcharts.chart('penerbit', {
     },
     xAxis: {
         categories: [
-            'Imam Salimy', 'Simpleman', 'Titen Wattimena'
+            'Gary Dauberman', 'Simpleman', 'Andrea Hirata'
         ],
         crosshair: true
     },
