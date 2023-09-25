@@ -72,6 +72,8 @@ Route::post('/kategori/store', [KategoriController::class, 'store'])->name('kate
 Route::get('/kategori/edit/{id}', [KategoriController::class, 'edit'])->name('kategori_edit');
 Route::post('/kategori/update/{kategori}', [KategoriController::class, 'update'])->name('kategori_update');
 Route::post('/kategori/destroy/{kategori}', [KategoriController::class, 'destroy'])->name('kategori_destroy');
+
+Route::get('kategori/search', [KategoriController::class, 'search'])->name('kategori_search');
  Route::get('kategori-pdf', [KategoriController::class, 'generatePDF'])->name('generate-pdf');
 
 
@@ -84,6 +86,8 @@ Route::post('/peminjaman/show', [PeminjamanController::class, 'show'])->name('pe
 Route::get('/peminjaman/edit/{id}', [PeminjamanController::class, 'edit'])->name('peminjaman_edit');
 Route::post('/peminjaman/update/{peminjaman}', [PeminjamanController::class, 'update'])->name('peminjaman_update');
 Route::post('/peminjaman/destroy/{peminjaman}', [PeminjamanController::class, 'destroy'])->name('peminjaman_destroy');
+
+Route::get('peminjaman/search', [KategoriController::class, 'search'])->name('peminjaman_search');
 Route::get('/peminjaman/show/{id}', [PeminjamanController::class, 'show'])->name('peminjaman_show');
 
 
@@ -102,6 +106,8 @@ Route::get('/penulis/edit/{id}', [PenulisController::class, 'edit'])->name('penu
 Route::post('/penulis/update/{penulis}', [PenulisController::class, 'update'])->name('penulis_update');
 Route::post('/penulis/destroy/{penulis}', [PenulisController::class, 'destroy'])->name('penulis_destroy');
 Route::get('/penulis/show/{id}', [PenulisController::class, 'show'])->name('penulis_show');
+
+Route::get('penullis/search', [PenulisController::class, 'search'])->name('penulis_search');
  Route::get('penulis-pdf', [PenulisController::class, 'generatePDF'])->name('generate-pdf');
 
 
@@ -115,6 +121,8 @@ Route::get('/penerbit/edit/{id}', [PenerbitController::class, 'edit'])->name('pe
 Route::post('/penerbit/update/{penerbit}', [PenerbitController::class, 'update'])->name('penerbit_update');
 Route::post('/penerbit/destroy/{penerbit}', [PenerbitController::class, 'destroy'])->name('penerbit_destroy');
 Route::get('/penerbit/show/{id}', [PenerbitController::class, 'show'])->name('penerbit_show');
+
+Route::get('penerbit/search', [PenerbitController::class, 'search'])->name('penerbit_search');
  Route::get('penerbit-pdf', [PenerbitController::class, 'generatePDF'])->name('generate-pdf');
 
 

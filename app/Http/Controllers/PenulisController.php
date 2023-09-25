@@ -6,6 +6,7 @@ use App\Models\Penulis;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use PDF;
+
 class PenulisController extends Controller
 {
     /**
@@ -129,4 +130,19 @@ class PenulisController extends Controller
      
         return $pdf->stream();
     }
+        // menangkap data pencarian
+    public function search(Request $request){
+if($request->has('search')){
+    $penulis = Penulis::where('nama','LIKE',"%".$request->search."%")->get();
+}
+ 
+ else{
+    $penulis= Penulis::all();
+ }
+   
+    return view('pages.admin.penulis.index',[
+        'penulis' => $penulis,
+    ]);
+ 
+}
 }

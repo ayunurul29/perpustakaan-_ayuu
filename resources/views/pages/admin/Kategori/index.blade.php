@@ -23,6 +23,18 @@
     </div>
     @endif
 
+  <div class="card-body">
+        <div class="col-md-6">
+         <form method="get" action="{{ route('kategori_search') }}">
+               <form method="get" action="/search">
+            <div class="input-group">
+                <input type="search"  class="form-control" name="search"   placeholder="Search Nama Buku..">
+                <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
+            </div>
+        </form>
+    </div>
+</div>
+
     <div class="card-body">
         <div style="margin-bottom: 20px">
             

@@ -2,6 +2,13 @@
 
 @section('content')
 
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <h3>Penerbit</h3>
+        </div>
+    </div>
+</div>
 
 
 
@@ -16,7 +23,17 @@
         <p>{{ $message }}</p>
     </div>
     @endif
-
+  <div class="card-body">
+        <div class="col-md-6">
+         <form method="get" action="{{ route('penerbit_search') }}">
+               <form method="get" action="/search">
+            <div class="input-group">
+                <input type="search"  class="form-control" name="search"   placeholder="Search Nama Penerbit..">
+                <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
+            </div>
+        </form>
+    </div>
+</div>
     <div class="card-body">
         <div style="margin-bottom: 20px">
             <a href="{{ route('penerbit_create') }}" class="btn btn-primary btn-flat">

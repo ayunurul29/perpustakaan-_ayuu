@@ -39,7 +39,6 @@
             <td>{{ @$value->penulis->nama }}</td>
             <td>{{ @$value->penerbit->nama }}</td>
             <td>{{ @$value->kategori->nama }}</td>
-          
             <td>{{ $value->sinopsis }}</td>
             <td><img src="{{ asset('storage/'.$value->sampul) }}" style="width: 150px;"></td>
         </tr>

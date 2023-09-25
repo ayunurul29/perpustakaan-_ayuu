@@ -131,4 +131,19 @@ class PenerbitController extends Controller
      
         return $pdf->stream();
     }
+        // menangkap data pencarian
+       public function search(Request $request){
+if($request->has('search')){
+    $penerbit = Penerbit::where('nama','LIKE',"%".$request->search."%")->get();
+}
+ 
+ else{
+    $penerbit= Penerbit::all();
+ }
+   
+    return view('pages.admin.penerbit.index',[
+        'penerbit' => $penerbit,
+    ]);
+ 
+}
 }

@@ -112,4 +112,19 @@ class KategoriController extends Controller
      
         return $pdf->stream();
     }
+    // menangkap data pencarian
+    public function search(Request $request){
+if($request->has('search')){
+    $kategori = Kategori::where('nama','LIKE',"%".$request->search."%")->get();
+}
+ 
+ else{
+    $kategori= Kategori::all();
+ }
+   
+    return view('pages.admin.kategori.index',[
+        'kategori' => $kategori,
+    ]);
+ 
+}
 }
