@@ -30,6 +30,7 @@
             <div class="input-group">
                 <input type="search"  class="form-control" name="search"   placeholder="Search Nama Buku..">
                 <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
+                 <a href="{{ route ('export') }}" class="btn btn-primary"> Export Excel </ a >
             </div>
         </form>
     </div>
