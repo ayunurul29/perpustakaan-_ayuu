@@ -43,7 +43,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 //template
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-
+Route::get('kategori-grafik', [KategoriController::class, 'grafik'])->name('kategori-grafik');
 
 //BUKU
 Route::get('/buku', [BukuController::class, 'index'])->name('buku_index');
@@ -57,12 +57,9 @@ Route::get('/buku/show/{id}', [BukuController::class, 'show'])->name('buku_show'
 
 Route::post('/buku/update/{buku}', [BukuController::class, 'update'])->name('buku_update');
 Route::post('/buku/destroy/{buku}', [BukuController::class, 'destroy'])->name('buku_destroy');
-
 Route::get('buku/search', [BukuController::class, 'search'])->name('buku_search');
-
 Route::get('generate-pdf', [BukuController::class, 'generatePDF'])->name('generate-pdf');
-
-
+Route::get('export-excel', [BukuController::class, 'excel'])->name('export-excel');
 
 //KATEGORI
 Route::get('/kategori', [KategoriController::class, 'index'])->name('kategori_index');
@@ -75,6 +72,7 @@ Route::post('/kategori/destroy/{kategori}', [KategoriController::class, 'destroy
 
 Route::get('kategori/search', [KategoriController::class, 'search'])->name('kategori_search');
  Route::get('kategori-pdf', [KategoriController::class, 'generatePDF'])->name('generate-pdf');
+ Route::get('kategori-excel', [KategoriController::class, 'excel'])->name('kategori-excel');
 
 
  //PEMINJAMAN
@@ -89,11 +87,9 @@ Route::post('/peminjaman/destroy/{peminjaman}', [PeminjamanController::class, 'd
 
 Route::get('peminjaman/search', [KategoriController::class, 'search'])->name('peminjaman_search');
 Route::get('/peminjaman/show/{id}', [PeminjamanController::class, 'show'])->name('peminjaman_show');
-
-
 Route::get('peminjaman/search', [PeminjamanController::class, 'search'])->name('peminjaman_search');
-
 Route::get('peminjaman-pdf', [PeminjamanController::class, 'generatePDF'])->name('generate-pdf');
+Route::get('peminjaman-excel', [PeminjamanController::class, 'excel'])->name('peminjaman-excel');
 
  
  //PENULIS
@@ -109,7 +105,7 @@ Route::get('/penulis/show/{id}', [PenulisController::class, 'show'])->name('penu
 
 Route::get('penullis/search', [PenulisController::class, 'search'])->name('penulis_search');
  Route::get('penulis-pdf', [PenulisController::class, 'generatePDF'])->name('generate-pdf');
-
+Route::get('penulis-excel', [PenulisController::class, 'excel'])->name('penulis-excel');
 
  //PENERBIT
 Route::get('/penerbit', [PenerbitController::class, 'index'])->name('penerbit_index');
@@ -124,7 +120,7 @@ Route::get('/penerbit/show/{id}', [PenerbitController::class, 'show'])->name('pe
 
 Route::get('penerbit/search', [PenerbitController::class, 'search'])->name('penerbit_search');
  Route::get('penerbit-pdf', [PenerbitController::class, 'generatePDF'])->name('generate-pdf');
-
+Route::get('penerbit-excel', [PenerbitController::class, 'excel'])->name('penerbit-excel');
 
 Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/', [DashboardController::class, 'index'])
@@ -135,3 +131,11 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

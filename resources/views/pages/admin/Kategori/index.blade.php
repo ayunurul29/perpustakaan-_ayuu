@@ -44,7 +44,7 @@
               <a href="{{ url('kategori-pdf') }}" class="btn btn-danger btn-flat">
                 <i class="fa fa-file-pdf"></i> Export PDF
             </a>
-              <a href="{{ url('data kategori') }}" class="btn btn-success btn-flat">
+              <a href="{{ url('kategori-excel') }}" class="btn btn-success btn-flat">
                 <i class="fa fa-file-excel"></i> Export Excel
             </a>
         </div>

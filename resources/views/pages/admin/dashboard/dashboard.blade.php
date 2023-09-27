@@ -210,7 +210,7 @@ Highcharts.chart('penerbit', {
     },
     xAxis: {
         categories: [
-            'Gary Dauberman', 'Simpleman', 'Andrea Hirata'
+            'Pramoedya Ananta Toer', 'Dhony Dhirgantoro', 'Andrea Hirata',''
         ],
         crosshair: true
     },

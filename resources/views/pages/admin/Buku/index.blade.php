@@ -30,7 +30,7 @@
             <div class="input-group">
                 <input type="search"  class="form-control" name="search"   placeholder="Search Nama Buku..">
                 <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
-                 <a href="{{ route ('export') }}" class="btn btn-primary"> Export Excel </ a >
+               
             </div>
         </form>
     </div>
@@ -41,7 +41,7 @@
             <a href="{{ route('buku_create') }}" class="btn btn-primary btn-flat">
                 <i class="fa fa-plus-circle"></i> Tambah Data
             </a>
-            <a href="{{ url('export-data') }}" class="btn btn-success btn-flat">
+            <a href="{{ url('export-excel') }}" class="btn btn-success btn-flat">
                 <i class="fa fa-file-excel"></i> Export Excel
             </a>
              <a href="{{ url('generate-pdf') }}" class="btn btn-danger btn-flat">
